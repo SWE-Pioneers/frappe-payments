@@ -1,0 +1,321 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: frappe\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+
+#. ai-translated; needs-native-review
+msgid "Access Token Updated"
+msgstr "تم تحديث رمز الوصول"
+
+#. ai-translated; needs-native-review
+msgid "An error occured during the payment process. Please contact us."
+msgstr "حدث خطأ أثناء عملية الدفع. يرجى التواصل معنا."
+
+#. ai-translated; needs-native-review
+msgid "Card Details"
+msgstr "تفاصيل البطاقة"
+
+#. ai-translated; needs-native-review
+msgid "Clear"
+msgstr "مسح"
+
+#. ai-translated; needs-native-review
+msgid "Click here"
+msgstr "انقر هنا"
+
+#. ai-translated; needs-native-review
+msgid "Continue"
+msgstr "متابعة"
+
+#. ai-translated; needs-native-review
+msgid "Controller method get_razorpay_order missing"
+msgstr "دالة المتحكم get_razorpay_order مفقودة"
+
+#. ai-translated; needs-native-review
+msgid "Could not create Paymob order"
+msgstr "تعذر إنشاء طلب Paymob"
+
+#. ai-translated; needs-native-review
+msgid "Could not create Razorpay order. Please contact Administrator"
+msgstr "تعذر إنشاء طلب Razorpay. يرجى التواصل مع المسؤول"
+
+#. ai-translated; needs-native-review
+msgid "Could not create razorpay order"
+msgstr "تعذر إنشاء طلب Razorpay"
+
+#. ai-translated; needs-native-review
+msgid "Could not generate Paymob payment URL"
+msgstr "تعذر إنشاء رابط الدفع الخاص بـ Paymob"
+
+#. ai-translated; needs-native-review
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. ai-translated; needs-native-review
+msgid "Error"
+msgstr "خطأ"
+
+#. ai-translated; needs-native-review
+msgid "Expired Token"
+msgstr "رمز منتهي الصلاحية"
+
+#. ai-translated; needs-native-review
+msgid "Failed to create order in Paymob"
+msgstr "فشل إنشاء الطلب في Paymob"
+
+#. ai-translated; needs-native-review
+msgid "Failed to retrieve payment token from Paymob"
+msgstr "فشل استرجاع رمز الدفع من Paymob"
+
+#. ai-translated; needs-native-review
+msgid "Failed while amending subscription"
+msgstr "فشل أثناء تعديل الاشتراك"
+
+#. ai-translated; needs-native-review
+msgid "For currency {0}, the minimum transaction amount should be {1}"
+msgstr "بالنسبة للعملة {0}، يجب أن يكون الحد الأدنى لمبلغ المعاملة {1}"
+
+#. ai-translated; needs-native-review
+msgid "For more information, {0}."
+msgstr "لمزيد من المعلومات، {0}."
+
+#. ai-translated; needs-native-review
+msgid "Get Access Token"
+msgstr "الحصول على رمز الوصول"
+
+#. ai-translated; needs-native-review
+msgid "Getting Access Token ..."
+msgstr "جارٍ الحصول على رمز الوصول ..."
+
+#. ai-translated; needs-native-review
+msgid "In Valid Request"
+msgstr "طلب غير صالح"
+
+#. ai-translated; needs-native-review
+msgid "Invalid Checkout Request ID"
+msgstr "معرّف طلب الدفع غير صالح"
+
+#. ai-translated; needs-native-review
+msgid "Invalid Conversation ID"
+msgstr "معرّف المحادثة غير صالح"
+
+#. ai-translated; needs-native-review
+msgid "Invalid HMAC"
+msgstr "قيمة HMAC غير صالحة"
+
+#. ai-translated; needs-native-review
+msgid "Invalid Subscription"
+msgstr "اشتراك غير صالح"
+
+#. ai-translated; needs-native-review
+msgid "Invalid Token"
+msgstr "رمز غير صالح"
+
+#. ai-translated; needs-native-review
+msgid "Invalid payment gateway credentials"
+msgstr "بيانات اعتماد بوابة الدفع غير صالحة"
+
+#. ai-translated; needs-native-review
+msgid "Issue detected with Mpesa configuration, check the error logs for more details"
+msgstr "تم اكتشاف مشكلة في إعدادات Mpesa، تحقق من سجلات الأخطاء لمزيد من التفاصيل"
+
+#. ai-translated; needs-native-review
+msgid "It seems that there is an issue with the server's stripe configuration. In case of failure, the amount will get refunded to your account."
+msgstr "يبدو أن هناك مشكلة في إعدادات Stripe على الخادم. في حال الفشل، سيُعاد المبلغ إلى حسابك."
+
+#. ai-translated; needs-native-review
+msgid "John Doe"
+msgstr "فلان الفلاني"
+
+#. ai-translated; needs-native-review
+msgid "Loading Payment System"
+msgstr "جارٍ تحميل نظام الدفع"
+
+#. ai-translated; needs-native-review
+msgid "Looks like someone sent you to an incomplete URL. Please ask them to look into it."
+msgstr "يبدو أن أحدهم أرسل لك رابطًا غير مكتمل. يرجى الطلب منه مراجعته."
+
+#. ai-translated; needs-native-review
+msgid "Looks like something is wrong with this site's Paypal configuration."
+msgstr "يبدو أن هناك خطأ في إعدادات PayPal لهذا الموقع."
+
+#. ai-translated; needs-native-review
+msgid "Looks like something is wrong with this site's payment gateway configuration. No payment has been made."
+msgstr "يبدو أن هناك خطأ في إعدادات بوابة الدفع لهذا الموقع. لم تتم أي عملية دفع."
+
+#. ai-translated; needs-native-review
+msgid "Looks like something went wrong during the transaction. Since we haven't confirmed the payment, Paypal will automatically refund you this amount. If it doesn't, please send us an email and mention the Correlation ID: {0}."
+msgstr "يبدو أن هناك خطأ حدث أثناء المعاملة. بما أننا لم نؤكد الدفع، سيقوم PayPal تلقائيًا بإعادة هذا المبلغ إليك. إذا لم يحدث ذلك، يرجى إرسال بريد إلكتروني إلينا مع ذكر معرّف الربط: {0}."
+
+#. ai-translated; needs-native-review
+msgid "Missing ERPNext App"
+msgstr "تطبيق ERPNext مفقود"
+
+#. ai-translated; needs-native-review
+msgid "Missing HMAC"
+msgstr "قيمة HMAC مفقودة"
+
+#. ai-translated; needs-native-review
+msgid "Missing order ID"
+msgstr "معرّف الطلب مفقود"
+
+#. ai-translated; needs-native-review
+msgid "Missing order ID or amount"
+msgstr "معرّف الطلب أو المبلغ مفقود"
+
+#. ai-translated; needs-native-review
+msgid "Mpesa Express Error"
+msgstr "خطأ في Mpesa Express"
+
+#. ai-translated; needs-native-review
+msgid "Name"
+msgstr "الاسم"
+
+#. ai-translated; needs-native-review
+msgid "No Integration Request found for this order"
+msgstr "لم يُعثر على طلب تكامل لهذا الطلب"
+
+#. ai-translated; needs-native-review
+msgid "Pay"
+msgstr "ادفع"
+
+#. ai-translated; needs-native-review
+msgid "Pay {0} {1}"
+msgstr "ادفع {0} {1}"
+
+#. ai-translated; needs-native-review
+msgid "Payment Cancelled"
+msgstr "تم إلغاء الدفع"
+
+#. ai-translated; needs-native-review
+msgid "Payment Confirmation"
+msgstr "تأكيد الدفع"
+
+#. ai-translated; needs-native-review
+msgid "Payment Failed"
+msgstr "فشل الدفع"
+
+#. ai-translated; needs-native-review
+msgid "Payment Success"
+msgstr "نجح الدفع"
+
+#. ai-translated; needs-native-review
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. ai-translated; needs-native-review
+msgid "Please check your configuration and try again"
+msgstr "يرجى التحقق من إعداداتك والمحاولة مرة أخرى"
+
+#. ai-translated; needs-native-review
+msgid "Please select another payment method. Go Cardless does not support transactions in currency '{0}'"
+msgstr "يرجى اختيار وسيلة دفع أخرى. لا يدعم GoCardless المعاملات بالعملة '{0}'"
+
+#. ai-translated; needs-native-review
+msgid "Please select another payment method. Mpesa does not support transactions in currency '{0}'"
+msgstr "يرجى اختيار وسيلة دفع أخرى. لا يدعم Mpesa المعاملات بالعملة '{0}'"
+
+#. ai-translated; needs-native-review
+msgid "Please select another payment method. PayPal does not support transactions in currency '{0}'"
+msgstr "يرجى اختيار وسيلة دفع أخرى. لا يدعم PayPal المعاملات بالعملة '{0}'"
+
+#. ai-translated; needs-native-review
+msgid "Please select another payment method. Paytm does not support transactions in currency '{0}'"
+msgstr "يرجى اختيار وسيلة دفع أخرى. لا يدعم Paytm المعاملات بالعملة '{0}'"
+
+#. ai-translated; needs-native-review
+msgid "Please select another payment method. Razorpay does not support transactions in currency '{0}'"
+msgstr "يرجى اختيار وسيلة دفع أخرى. لا يدعم Razorpay المعاملات بالعملة '{0}'"
+
+#. ai-translated; needs-native-review
+msgid "Please select another payment method. Stripe does not support transactions in currency '{0}'"
+msgstr "يرجى اختيار وسيلة دفع أخرى. لا يدعم Stripe المعاملات بالعملة '{0}'"
+
+#. ai-translated; needs-native-review
+msgid "Please set the initiator name and the security credential"
+msgstr "يرجى تعيين اسم المُبادِر وبيانات الأمان"
+
+#. ai-translated; needs-native-review
+msgid "Processing..."
+msgstr "جارٍ المعالجة..."
+
+#. ai-translated; needs-native-review
+msgid "Razorpay Signature Verification Failed"
+msgstr "فشل التحقق من توقيع Razorpay"
+
+#. ai-translated; needs-native-review
+msgid "Seems API Key or API Secret is wrong !!!"
+msgstr "يبدو أن مفتاح API أو سر API غير صحيح !!!"
+
+#. ai-translated; needs-native-review
+msgid "Seems Publishable Key or Secret Key is wrong !!!"
+msgstr "يبدو أن المفتاح القابل للنشر أو المفتاح السري غير صحيح !!!"
+
+#. ai-translated; needs-native-review
+msgid "Seems issue with server's razorpay config. Don't worry, in case of failure amount will get refunded to your account."
+msgstr "يبدو أن هناك مشكلة في إعدادات Razorpay على الخادم. لا تقلق، في حال الفشل سيُعاد المبلغ إلى حسابك."
+
+#. ai-translated; needs-native-review
+msgid "Seems token you are using is invalid!"
+msgstr "يبدو أن الرمز الذي تستخدمه غير صالح!"
+
+#. ai-translated; needs-native-review
+msgid "Server Error"
+msgstr "خطأ في الخادم"
+
+#. ai-translated; needs-native-review
+msgid "Some information is missing"
+msgstr "بعض المعلومات مفقودة"
+
+#. ai-translated; needs-native-review
+msgid "Something went wrong"
+msgstr "حدث خطأ ما"
+
+#. ai-translated; needs-native-review
+msgid "Success"
+msgstr "نجاح"
+
+#. ai-translated; needs-native-review
+msgid "There seems to be an issue with the server's GoCardless configuration. Don't worry, in case of failure, the amount will get refunded to your account."
+msgstr "يبدو أن هناك مشكلة في إعدادات GoCardless على الخادم. لا تقلق، في حال الفشل، سيُعاد المبلغ إلى حسابك."
+
+#. ai-translated; needs-native-review
+msgid "There seems to be an issue with the server's braintree configuration. Don't worry, in case of failure, the amount will get refunded to your account."
+msgstr "يبدو أن هناك مشكلة في إعدادات Braintree على الخادم. لا تقلق، في حال الفشل، سيُعاد المبلغ إلى حسابك."
+
+#. ai-translated; needs-native-review
+msgid "Transaction Error"
+msgstr "خطأ في المعاملة"
+
+#. ai-translated; needs-native-review
+msgid "Your payment has been successfully registered."
+msgstr "تم تسجيل دفعتك بنجاح."
+
+#. ai-translated; needs-native-review
+msgid "Your payment has failed."
+msgstr "فشلت عملية الدفع."
+
+#. ai-translated; needs-native-review
+msgid "Your payment is cancelled."
+msgstr "تم إلغاء دفعتك."
+
+#. ai-translated; needs-native-review
+msgid "Your payment was successfully accepted"
+msgstr "تم قبول دفعتك بنجاح"
+
+#. ai-translated; needs-native-review
+msgid "erpnext app is not installed. Please install it from {} or {}"
+msgstr "تطبيق erpnext غير مُثبَّت. يرجى تثبيته من {} أو {}"
+
+msgid "john@doe.com"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "{0} Settings not found"
+msgstr "لم يتم العثور على إعدادات {0}"
