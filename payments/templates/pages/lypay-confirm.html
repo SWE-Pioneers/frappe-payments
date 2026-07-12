@@ -1,0 +1,77 @@
+{% extends "templates/web.html" %}
+
+{% block title %} Confirm LyPay Payment {% endblock %}
+
+{%- block header -%}{% endblock %}
+
+{%- block page_content -%}
+<div class="wrapper">
+	<div class="checkout container">
+
+		<header>
+			<h3>{{ _("Confirm LyPay Payment") }}</h3>
+			<p>{{ _("Complete the instant-payment transfer of {0} {1} in your banking app using the payment reference below, then confirm it here.").format(amount, currency) }}</p>
+		</header>
+
+		<form id="lypay-confirm-form">
+			<section>
+				<div class="form-group">
+					<label>{{ _("Payment Reference") }}</label>
+					<input type="text" class="form-control" value="{{ payment_reference }}" readonly>
+				</div>
+				<div class="form-group">
+					<label>{{ _("Amount") }}</label>
+					<input type="text" class="form-control" value="{{ amount }} {{ currency }}" readonly>
+				</div>
+			</section>
+
+			<button class="btn btn-primary" type="submit" id="submit-button">
+				<span>{{ _("I've made the transfer, confirm payment") }}</span>
+			</button>
+			<div id="lypay-confirm-message" class="text-muted" style="margin-top: 10px;"></div>
+		</form>
+
+	</div>
+</div>
+
+<style>
+.checkout {
+	max-width: 60%;
+	margin: 40px auto;
+}
+
+#submit-button {
+	margin-top: 20px;
+}
+</style>
+
+<script>
+document.getElementById("lypay-confirm-form").addEventListener("submit", function (e) {
+	e.preventDefault();
+
+	var submitButton = document.getElementById("submit-button");
+	var message = document.getElementById("lypay-confirm-message");
+	submitButton.disabled = true;
+	message.innerText = "{{ _('Confirming payment with LyPay...') }}";
+
+	frappe.call({
+		method: "payments.payment_gateways.doctype.lypay_settings.lypay_settings.confirm_payment",
+		args: {
+			integration_request: "{{ integration_request }}",
+		},
+		callback: function (r) {
+			submitButton.disabled = false;
+			if (r.message && r.message.status === "Completed") {
+				window.location.href = r.message.redirect_to;
+			} else {
+				message.innerText = "{{ _('The payment could not be confirmed yet. Please make sure the transfer is complete and try again.') }}";
+			}
+		},
+		error: function () {
+			submitButton.disabled = false;
+			message.innerText = "{{ _('The payment could not be confirmed yet. Please make sure the transfer is complete and try again.') }}";
+		},
+	});
+});
+</script>
+{% endblock %}

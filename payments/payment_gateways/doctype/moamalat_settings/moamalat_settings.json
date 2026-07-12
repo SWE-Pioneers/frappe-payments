@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-07-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "credentials_section",
+  "moamalat_merchant_id",
+  "moamalat_terminal_id",
+  "column_break_creds",
+  "moamalat_secure_key",
+  "payment_config_section",
+  "moamalat_return_url",
+  "moamalat_data_service_url",
+  "column_break_config",
+  "redirect_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "credentials_section",
+   "fieldtype": "Section Break",
+   "label": "Credentials"
+  },
+  {
+   "fieldname": "moamalat_merchant_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Merchant ID (MID)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "moamalat_terminal_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Terminal ID (TID)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_creds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "moamalat_secure_key",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Secure Key (SHA-256)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_config_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Config"
+  },
+  {
+   "description": "Where the customer is redirected after Moamalat hosted checkout",
+   "fieldname": "moamalat_return_url",
+   "fieldtype": "Data",
+   "label": "Return URL"
+  },
+  {
+   "description": "Server-side URL to query Moamalat transaction status (Data Service / Filter API)",
+   "fieldname": "moamalat_data_service_url",
+   "fieldtype": "Data",
+   "label": "Data Service (Filter API) URL"
+  },
+  {
+   "fieldname": "column_break_config",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Mention transaction completion page URL\n\n",
+   "fieldname": "redirect_to",
+   "fieldtype": "Data",
+   "label": "Redirect To"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-07-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Payments",
+ "name": "Moamalat Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,76 @@
+{% extends "templates/web.html" %}
+
+{% block title %} {{ _("Confirm Payment") }} {% endblock %}
+
+{%- block header -%}{% endblock %}
+
+{%- block page_content -%}
+<div class="wrapper">
+	<div class="checkout container">
+
+		<header>
+			<h3>{{ _("Enter the OTP sent to your phone") }}</h3>
+			<p>{{ _("Amount") }}: {{ amount }} {{ currency }}</p>
+		</header>
+
+		<form id="plutu-otp-form">
+			<div class="form-group">
+				<label for="otp">{{ _("OTP") }}</label>
+				<input type="text" class="form-control" id="otp" name="otp" autocomplete="one-time-code" required>
+			</div>
+
+			<div id="plutu-otp-error" class="text-danger hidden"></div>
+
+			<button class="btn btn-primary" type="submit" id="submit-button">{{ _("Confirm") }}</button>
+		</form>
+
+	</div>
+</div>
+
+<style>
+.checkout {
+	max-width: 400px;
+	margin: 40px auto;
+}
+
+#plutu-otp-error {
+	margin: 10px 0;
+}
+</style>
+
+<script>
+frappe.ready(function () {
+	document.getElementById("plutu-otp-form").addEventListener("submit", function (e) {
+		e.preventDefault();
+
+		var submitButton = document.getElementById("submit-button");
+		submitButton.disabled = true;
+
+		frappe.call({
+			method: "payments.payment_gateways.doctype.plutu_settings.plutu_settings.plutu_confirm_otp",
+			args: {
+				transaction_id: "{{ transaction_id }}",
+				integration_request: "{{ integration_request }}",
+				otp: document.getElementById("otp").value,
+			},
+			callback: function (r) {
+				if (r.message && r.message.redirect_to) {
+					window.location.href = r.message.redirect_to;
+				} else {
+					submitButton.disabled = false;
+					var errorEl = document.getElementById("plutu-otp-error");
+					errorEl.classList.remove("hidden");
+					errorEl.innerText = "{{ _('Could not confirm OTP. Please try again.') }}";
+				}
+			},
+			error: function () {
+				submitButton.disabled = false;
+				var errorEl = document.getElementById("plutu-otp-error");
+				errorEl.classList.remove("hidden");
+				errorEl.innerText = "{{ _('Could not confirm OTP. Please try again.') }}";
+			},
+		});
+	});
+});
+</script>
+{% endblock %}
