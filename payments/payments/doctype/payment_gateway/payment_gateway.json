@@ -8,7 +8,8 @@
  "field_order": [
   "gateway",
   "gateway_settings",
-  "gateway_controller"
+  "gateway_controller",
+  "show_in_checkout"
  ],
  "fields": [
   {
@@ -30,6 +31,13 @@
    "fieldtype": "Dynamic Link",
    "label": "Gateway Controller",
    "options": "gateway_settings"
+  },
+  {
+   "default": "0",
+   "description": "Offer this gateway to buyers as a selectable option at checkout (in apps that support gateway selection, e.g. LMS). Only takes effect once the gateway's credentials are configured.",
+   "fieldname": "show_in_checkout",
+   "fieldtype": "Check",
+   "label": "Show in Checkout"
   }
  ],
  "links": [],
