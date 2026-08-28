@@ -26,6 +26,25 @@ def get_payment_gateway_controller(payment_gateway):
 			frappe.throw(_("{0} Settings not found").format(payment_gateway))
 
 
+def is_gateway_configured(payment_gateway: str) -> bool:
+	"""True iff the gateway's Settings controller resolves AND every required
+	field on it is populated — i.e. the credentials are actually filled in."""
+	try:
+		controller = get_payment_gateway_controller(payment_gateway)
+	except Exception:
+		return False
+	meta = frappe.get_meta(controller.doctype)
+	return all(controller.get(df.fieldname) for df in meta.fields if df.reqd)
+
+
+@frappe.whitelist()
+def get_enabled_payment_gateways() -> list[dict]:
+	"""Gateways an admin has ticked `show_in_checkout` AND that are configured.
+	The reusable primitive a consuming app (LMS first) renders as a selector."""
+	names = frappe.get_all("Payment Gateway", filters={"show_in_checkout": 1}, pluck="name")
+	return [{"name": n, "label": n} for n in names if is_gateway_configured(n)]
+
+
 @frappe.whitelist(allow_guest=True, xss_safe=True)
 def get_checkout_url(**kwargs):
 	try:
