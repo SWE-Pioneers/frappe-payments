@@ -6,6 +6,7 @@ app_publisher = "Frappe Technologies"
 app_description = "Payments app for frappe"
 app_email = "hello@frappe.io"
 app_license = "MIT"
+required_apps = ["swe_platform"]
 
 # Includes in <head>
 # ------------------
